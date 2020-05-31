@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="HydroAcousticApp_1.Views.GraphSignalsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:oxy="http://oxyplot.org/wpf"
+             Loaded="UserControl_Loaded"
+             mc:Ignorable="d" Background="GhostWhite"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <oxy:Plot x:Name="Plot" Title="{Binding DisplayName}">
+            <oxy:Plot.Axes>
+                <oxy:LinearAxis Title="Amplitude" Position="Left"/>
+                <oxy:LinearAxis Title="Counts" Position="Bottom"/>
+            </oxy:Plot.Axes>
+        </oxy:Plot>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Right" Orientation="Horizontal">
+            <Button x:Name="CalculateSignals" Content="Calculate" Margin="2"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

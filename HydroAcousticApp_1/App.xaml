@@ -1,0 +1,15 @@
+﻿<Application x:Class="HydroAcousticApp_1.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:HydroAcousticApp_1" xmlns:converters="clr-namespace:HydroAcousticApp_1.Converters">
+    <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <converters:SignalViewModelToLineSeries x:Key="SignalViewModelToLineSeries"/>
+                <local:Bootstrapper x:Key="Bootstrapper"/>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+    </Application.Resources>
+</Application>
