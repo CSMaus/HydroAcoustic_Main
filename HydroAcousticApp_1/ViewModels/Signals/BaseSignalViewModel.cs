@@ -1,13 +1,14 @@
 ﻿using Caliburn.Micro;
-using OxyPlot;
 using System.Runtime.CompilerServices;
+using LiveCharts;
+using LiveCharts.Defaults;
 
 namespace HydroAcousticApp_1.ViewModels.Signals
 {
     abstract class BaseSignalViewModel : PropertyChangedBase
     {
         SignalParamsViewModel _owner;
-        public IObservableCollection<DataPoint> SignalPoints { get; } = new BindableCollection<DataPoint>();
+        public ChartValues<ObservablePoint> SignalPoints { get; } = new ChartValues<ObservablePoint>();
         public BaseSignalViewModel(SignalParamsViewModel owner)
         {
             _owner = owner;

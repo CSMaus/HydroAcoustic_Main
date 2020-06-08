@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Windows;
 using Caliburn.Micro;
 using HydroAcousticApp_1.Services;
-using OxyPlot;
+using LiveCharts;
+using LiveCharts.Defaults;
 
 namespace HydroAcousticApp_1.ViewModels
 {
@@ -15,18 +11,18 @@ namespace HydroAcousticApp_1.ViewModels
         public GraphSpeedViewModel()
         {
             DisplayName = "Speed";
-            Points = new BindableCollection<DataPoint>();
+            Points = new ChartValues<ObservablePoint>();
         }
 
-        public IObservableCollection<DataPoint> Points { get; }
+        public ChartValues<ObservablePoint> Points { get; }
 
         public void Calculate()
         {
             Points.Clear();
             var depthMax = IoC.Get<WaterParamsViewModel>().Depth;
             var solver = IoC.Get<ChenMillero>();
-            for(var x = 1; x < depthMax; x+=100)
-                Points.Add(new DataPoint(solver.CalcSpeed(x), x));
+            for (var x = 1; x < depthMax; x += 100)
+                Points.Add(new ObservablePoint(solver.CalcSpeed(x), x));
         }
 
     }

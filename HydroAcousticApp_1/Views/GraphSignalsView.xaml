@@ -4,7 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:oxy="http://oxyplot.org/wpf"
-             Loaded="UserControl_Loaded"
+             xmlns:wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             xmlns:viewModels="clr-namespace:HydroAcousticApp_1.ViewModels"
+             d:DataContext="{d:DesignInstance viewModels:GraphSignalsViewModel}"
              mc:Ignorable="d" Background="GhostWhite"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
@@ -12,12 +14,20 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <oxy:Plot x:Name="Plot" Title="{Binding DisplayName}">
+        <!--<oxy:Plot x:Name="Plot" Title="{Binding DisplayName}">
             <oxy:Plot.Axes>
                 <oxy:LinearAxis Title="Amplitude" Position="Left"/>
                 <oxy:LinearAxis Title="Counts" Position="Bottom"/>
             </oxy:Plot.Axes>
-        </oxy:Plot>
+        </oxy:Plot>-->
+		<wpf:CartesianChart Name="Plot" Series="{Binding Signals, Converter={StaticResource SignalViewModelToLineSeries}}">
+			<wpf:CartesianChart.AxisY>
+                <wpf:Axis Title="Amplitude"/>
+			</wpf:CartesianChart.AxisY>
+			<wpf:CartesianChart.AxisX>
+				<wpf:Axis Title="Counts"/>
+			</wpf:CartesianChart.AxisX>
+		</wpf:CartesianChart>
         <StackPanel Grid.Row="1" HorizontalAlignment="Right" Orientation="Horizontal">
             <Button x:Name="CalculateSignals" Content="Calculate" Margin="2"/>
         </StackPanel>

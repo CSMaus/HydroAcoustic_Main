@@ -1,7 +1,7 @@
 ﻿using Caliburn.Micro;
 using HydroAcousticApp_1.Services;
-using OxyPlot;
 using System;
+using LiveCharts.Defaults;
 
 namespace HydroAcousticApp_1.ViewModels.Signals
 {
@@ -46,9 +46,9 @@ namespace HydroAcousticApp_1.ViewModels.Signals
             SignalPoints.Clear();
             double timeMax = IoC.Get<SignalParamsViewModel>().Time;
             double step = timeMax / 1000;
-            var solver = IoC.Get<GenerateSignals>();
+            var solver = _generator;
             for (var t = 0.0; t < timeMax; t += step)
-                SignalPoints.Add(new DataPoint(t, solver.SineGenerate(t)));
+                SignalPoints.Add(new ObservablePoint(t, solver.SineGenerate(t)));
         }
     }
 }
