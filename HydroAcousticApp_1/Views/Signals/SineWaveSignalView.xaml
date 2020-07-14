@@ -4,13 +4,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HydroAcousticApp_1.Views.Signals"
-             mc:Ignorable="d"  Background="GhostWhite" FontSize="20" FontFamily="Sitka Display"
-             d:DesignHeight="450" d:DesignWidth="800">
+             mc:Ignorable="d" Background="#FF858A9B" FontSize="20" 
+             FontFamily="Sitka Display" BorderBrush="#FFB5BECD"
+             d:DesignHeight="450" d:DesignWidth="400">
 
     <GroupBox Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" SizeChanged="GroupBox_SizeChanged">
         <GroupBox.Header>
             <Grid>
-                <Button x:Name="Delete" Height="20" Width="20" HorizontalAlignment="Right" Margin="0,0,10,0" Background="Red">
+                <Button x:Name="Delete" Height="20" Width="20" HorizontalAlignment="Right" 
+                        Margin="0,0,10,0" Background="DarkGray">
                     <TextBlock Text="x" Margin="0,-5"/>
                 </Button>
                 <CheckBox x:Name="ActiveCheck" HorizontalAlignment="Left">
@@ -34,15 +36,18 @@
             </Grid.RowDefinitions>
 
             <TextBlock Grid.Column="0" Margin="0, 0, 2, 0" Grid.Row="0"> Frequency</TextBlock>
-            <TextBox x:Name="Frequency" Text="{Binding Frequency}" Grid.Column="1" Grid.Row="0"></TextBox>
+            <TextBox x:Name="Frequency" Text="{Binding Frequency}" Grid.Column="1" Grid.Row="0" 
+                     Background="GhostWhite"></TextBox>
             <TextBlock Grid.Column="3" Margin="0, 0, 2, 0" Grid.Row="0"> kHz</TextBlock>
 
             <TextBlock Grid.Column="0" Margin="0, 0, 2, 0" Grid.Row="1"> Amplitude</TextBlock>
-            <TextBox x:Name="Amplitude"  Text="{Binding Amplitude}" Grid.Column="1" Grid.Row="1"></TextBox>
+            <TextBox x:Name="Amplitude"  Text="{Binding Amplitude}" Grid.Column="1" Grid.Row="1" 
+                     Background="GhostWhite"></TextBox>
             <TextBlock Grid.Column="3" Margin="0, 0, 2, 0" Grid.Row="1"> counts</TextBlock>
 
             <TextBlock Grid.Column="0" Margin="0, 0, 2, 0" Grid.Row="4">Phase</TextBlock>
-            <TextBox x:Name="Phase" Text="{Binding Phase}"  Grid.Column="1" Grid.Row="4"></TextBox>
+            <TextBox x:Name="Phase" Text="{Binding Phase}"  Grid.Column="1" Grid.Row="4" 
+                     Background="GhostWhite"></TextBox>
             <TextBlock Grid.Column="3" Margin="0, 0, 2, 0" Grid.Row="4"> deg</TextBlock>
         </Grid>
     </GroupBox>

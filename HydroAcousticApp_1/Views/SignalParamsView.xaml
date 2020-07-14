@@ -4,7 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:cal="http://www.caliburnproject.org"
-             mc:Ignorable="d" Background="GhostWhite" FontSize="20" FontFamily="Sitka Display"
+             mc:Ignorable="d" 
+             Background="#FF858A9B" FontSize="20" FontFamily="Sitka Display" BorderBrush="#FFB5BECD"
              d:DesignHeight="600" d:DesignWidth="300">
     <Grid >
         <Grid.ColumnDefinitions>
@@ -19,18 +20,20 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Column="0" Margin="0, 0, 2, 0" Grid.Row="0">TimeImpulse</TextBlock>
-        <TextBox x:Name="Time" Text="{Binding Time}"  Grid.Column="1" Grid.Row="0"></TextBox>
+        <TextBox x:Name="Time" Text="{Binding Time}"  Grid.Column="1" Grid.Row="0"
+                 Background="#FFE0E6F7"></TextBox>
         <TextBlock Grid.Column="3" Margin="0, 0, 2, 0" Grid.Row="0"> msec</TextBlock>
         
         <ItemsControl Grid.Row="1" Grid.ColumnSpan="3" ItemsSource="{Binding Signals}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <ContentControl cal:View.Model="{Binding}"/>
+                    <!--<ContentControl cal:View.Model="{Binding}"/>-->
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
 
-        <Button Grid.Row="2" x:Name="Plus" MinHeight="30" HorizontalAlignment="Left" Background="LightGreen" MinWidth="30">
+        <Button Grid.Row="2" x:Name="Plus" Height="20" HorizontalAlignment="Left" Width="30" 
+                Background="LightGray">
             <TextBlock Text="+" Margin="0,-5"/>
         </Button>
     

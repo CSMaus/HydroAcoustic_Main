@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HydroAcousticApp_1.Views"
-             mc:Ignorable="d" Background="GhostWhite" FontSize="20" FontFamily="Sitka Display"
+             mc:Ignorable="d" Background="#FF858A9B" FontSize="20" FontFamily="Sitka Display"
              d:DesignHeight="200" d:DesignWidth="300">
     <Grid x:Name="grdWaterGrid">
         <Grid.ColumnDefinitions>
@@ -25,17 +25,20 @@
 
         <!-- Row 1 -->
         <TextBlock Grid.Column="1" Grid.Row="1" Margin="2,2,2,0"> Salinity</TextBlock>
-        <TextBox x:Name="Salt" Text="{Binding Salt}"  Grid.Column="2" Grid.Row="1" MinWidth="60" Margin="2,2,2,0"></TextBox>
+        <TextBox x:Name="Salt" Text="{Binding Salt}"  Grid.Column="2" Grid.Row="1" 
+                 MinWidth="60" Margin="2,2,2,0" Background="#FFE0E6F7"></TextBox>
         <TextBlock Grid.Column="3" Grid.Row="1" Margin="2,4,2,0" FontSize="14">ppm</TextBlock>
 
         <!-- Row 2 -->
         <TextBlock Grid.Column="1" Grid.Row="2" Margin="2,2,2,0"> Temperature</TextBlock>
-        <TextBox x:Name="Temp" Text="{Binding Temp}" Grid.Column="2" Grid.Row="2" Margin="2,2,2,0"></TextBox>
+        <TextBox x:Name="Temp" Text="{Binding Temp}" Grid.Column="2" 
+                 Grid.Row="2" Margin="2,2,2,0" Background="#FFE0E6F7"></TextBox>
         <TextBlock Grid.Column="3" Grid.Row="2" Margin="2,4,2,0" FontSize="14">celcius</TextBlock>
 
         <!-- Row 3 -->
         <TextBlock Grid.Column="1" Grid.Row="3" Margin="2,2,2,0"> Depth</TextBlock>
-        <TextBox x:Name="Depth" Text="{Binding Depth}" Grid.Column="2" Grid.Row="3" Margin="2,2,2,0"></TextBox>
+        <TextBox x:Name="Depth" Text="{Binding Depth}" Grid.Column="2" 
+                 Grid.Row="3" Margin="2,2,2,0" Background="#FFE0E6F7"></TextBox>
         <TextBlock Grid.Column="3" Grid.Row="3" Margin="2,4,2,0" FontSize="14">meters</TextBlock>
         
         
