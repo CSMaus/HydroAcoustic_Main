@@ -7,7 +7,7 @@
              xmlns:wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              xmlns:viewModels="clr-namespace:HydroAcousticApp_1.ViewModels"
              d:DataContext="{d:DesignInstance viewModels:GraphSignalsViewModel}"
-             mc:Ignorable="d" Background="#FF858A9B"
+             mc:Ignorable="d" Background="#FFAEB5CA"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.RowDefinitions>

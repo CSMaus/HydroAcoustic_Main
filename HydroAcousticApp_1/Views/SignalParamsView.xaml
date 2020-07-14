@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:cal="http://www.caliburnproject.org"
              mc:Ignorable="d" 
-             Background="#FF858A9B" FontSize="20" FontFamily="Sitka Display" BorderBrush="#FFB5BECD"
+             Background="#FFAEB5CA" FontSize="20" FontFamily="Sitka Display" BorderBrush="#FFB5BECD"
              d:DesignHeight="600" d:DesignWidth="300">
     <Grid >
         <Grid.ColumnDefinitions>
@@ -27,13 +27,13 @@
         <ItemsControl Grid.Row="1" Grid.ColumnSpan="3" ItemsSource="{Binding Signals}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <!--<ContentControl cal:View.Model="{Binding}"/>-->
+                    <ContentControl cal:View.Model="{Binding}"/>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
 
         <Button Grid.Row="2" x:Name="Plus" Height="20" HorizontalAlignment="Left" Width="30" 
-                Background="LightGray">
+                Background="#FFB5BECD">
             <TextBlock Text="+" Margin="0,-5"/>
         </Button>
     

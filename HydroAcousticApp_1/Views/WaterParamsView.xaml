@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HydroAcousticApp_1.Views"
-             mc:Ignorable="d" Background="#FF858A9B" FontSize="20" FontFamily="Sitka Display"
+             mc:Ignorable="d" Background="#FFAEB5CA" FontSize="20" FontFamily="Sitka Display"
              d:DesignHeight="200" d:DesignWidth="300">
     <Grid x:Name="grdWaterGrid">
         <Grid.ColumnDefinitions>

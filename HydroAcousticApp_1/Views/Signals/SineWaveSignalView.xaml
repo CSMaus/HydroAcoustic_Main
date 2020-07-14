@@ -4,15 +4,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HydroAcousticApp_1.Views.Signals"
-             mc:Ignorable="d" Background="#FF858A9B" FontSize="20" 
-             FontFamily="Sitka Display" BorderBrush="#FFB5BECD"
+             mc:Ignorable="d" Background="#FFAEB5CA" FontSize="20" 
+             FontFamily="Sitka Display" BorderBrush="#FFAEB5CA"
              d:DesignHeight="450" d:DesignWidth="400">
 
     <GroupBox Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" SizeChanged="GroupBox_SizeChanged">
         <GroupBox.Header>
             <Grid>
                 <Button x:Name="Delete" Height="20" Width="20" HorizontalAlignment="Right" 
-                        Margin="0,0,10,0" Background="DarkGray">
+                        Margin="0,0,10,0" Background="#FF858A9B">
                     <TextBlock Text="x" Margin="0,-5"/>
                 </Button>
                 <CheckBox x:Name="ActiveCheck" HorizontalAlignment="Left">
