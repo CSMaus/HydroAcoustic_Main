@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:cal="http://www.caliburnproject.org"
              mc:Ignorable="d" 
-             Background="#FFAEB5CA" FontSize="20" FontFamily="Sitka Display" BorderBrush="#FFB5BECD"
+             Background="#FFAEB5CA" FontSize="20" FontFamily="Sitka Display" BorderBrush="#FF8893A6"
              d:DesignHeight="600" d:DesignWidth="300">
     <Grid >
         <Grid.ColumnDefinitions>

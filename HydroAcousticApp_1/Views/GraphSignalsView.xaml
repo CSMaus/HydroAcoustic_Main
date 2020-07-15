@@ -8,7 +8,7 @@
              xmlns:viewModels="clr-namespace:HydroAcousticApp_1.ViewModels"
              d:DataContext="{d:DesignInstance viewModels:GraphSignalsViewModel}"
              mc:Ignorable="d" Background="#FFAEB5CA"
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="500">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -21,15 +21,42 @@
             </oxy:Plot.Axes>
         </oxy:Plot>-->
         <wpf:CartesianChart Name="Plot" Series="{Binding Signals, Converter={StaticResource SignalViewModelToLineSeries}}"  FontSize="16">
-			<wpf:CartesianChart.AxisY>
+            <wpf:CartesianChart.AxisY>
                 <wpf:Axis Title="Amplitude" Foreground="#FFE0E6F7"/>
-			</wpf:CartesianChart.AxisY>
-			<wpf:CartesianChart.AxisX>
-				<wpf:Axis Title="Counts" Foreground="#FFE0E6F7"/>
-			</wpf:CartesianChart.AxisX>
-		</wpf:CartesianChart>
-        <StackPanel Grid.Row="1" HorizontalAlignment="Right" Orientation="Horizontal">
+            </wpf:CartesianChart.AxisY>
+            <wpf:CartesianChart.AxisX>
+                <wpf:Axis Title="Counts" Foreground="#FFE0E6F7"/>
+            </wpf:CartesianChart.AxisX>
+        </wpf:CartesianChart>
+
+        <!--<StackPanel Grid.Row="1" HorizontalAlignment="Right" Orientation="Horizontal">
             <Button x:Name="CalculateSignals" Content="Calculate" Margin="2"/>
-        </StackPanel>
+        </StackPanel>-->
+        <!--<StackPanel Grid.Row="1" HorizontalAlignment="Right" Orientation="Horizontal">
+            <Button x:Name="CalculateSignals" Click="Calculate" Margin="2">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Name="Border" BorderThickness="1"
+                                     CornerRadius="2" Background="#FFB5BECD" BorderBrush="#FFE0E6F7" >
+                                        <TextBlock Text="Calculate" Foreground="#FF2E2E2E"/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsPressed" Value="True">
+                                            <Setter TargetName="Border" Property="Background" Value="#FFAEB5CA" />
+                                        </Trigger>
+                                        <Trigger Property="IsPressed" Value="False">
+                                            <Setter TargetName="Border" Property="Background" Value="#FFE0E6F7" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </StackPanel>-->
     </Grid>
 </UserControl>

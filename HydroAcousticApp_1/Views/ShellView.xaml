@@ -16,7 +16,7 @@
         </Grid.ColumnDefinitions>
 
         <TabControl Grid.Column="0" Margin="20,20,0,20" ItemsSource="{Binding Parameters}" SelectedItem="{Binding ActiveItem}" 
-                    Background="#FF4C5057" BorderBrush="#FFB5BECD">
+                    Background="#FF4C5057" BorderBrush="#FFAEB5CA">
             <TabControl.Resources>
                 <Style TargetType="TabItem">
                     <Setter Property="Template">
@@ -36,7 +36,7 @@
                                 </Border>
                                 <ControlTemplate.Triggers>
                                     <Trigger Property="IsSelected" Value="True">
-                                        <Setter TargetName="Border" Property="Background" Value="#FFB5BECD" />
+                                        <Setter TargetName="Border" Property="Background" Value="#FFAEB5CA" />
                                     </Trigger>
                                     <Trigger Property="IsSelected" Value="False">
                                         <Setter TargetName="Border" Property="Background" Value="#FF858A9B" />
@@ -47,11 +47,6 @@
                     </Setter>
                 </Style>
             </TabControl.Resources>
-            <!--<TabControl.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding DisplayName}"/>
-                    </DataTemplate>
-            </TabControl.ItemTemplate>-->
             <TabControl.ContentTemplate>
                 <DataTemplate>
                     <ContentControl cal:View.Model="{Binding}"/>
@@ -80,7 +75,7 @@
                                 </Border>
                                 <ControlTemplate.Triggers>
                                     <Trigger Property="IsSelected" Value="True">
-                                        <Setter TargetName="Border" Property="Background" Value="#FFB5BECD" />
+                                        <Setter TargetName="Border" Property="Background" Value="#FFAEB5CA" />
                                     </Trigger>
                                     <Trigger Property="IsSelected" Value="False">
                                         <Setter TargetName="Border" Property="Background" Value="#FF858A9B" />
@@ -91,12 +86,6 @@
                     </Setter>
                 </Style>
             </TabControl.Resources>
-
-            <!--<TabControl.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding DisplayName}"/>
-                </DataTemplate>
-            </TabControl.ItemTemplate>-->
             <TabControl.ContentTemplate>
                 <DataTemplate>
                     <ContentControl cal:View.Model="{Binding}"/>

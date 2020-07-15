@@ -24,5 +24,10 @@ namespace HydroAcousticApp_1.Views
         {
             InitializeComponent();
         }
+
+        private void Calculate_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
