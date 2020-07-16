@@ -13,6 +13,7 @@ namespace HydroAcousticApp_1.ViewModels
     public class WaterParamsViewModel : Screen
     {
         private float _depth = 5000;
+        private int _meters;
         public double Salt 
         {
             get { return IoC.Get<ChenMillero>().Salt; }
@@ -40,7 +41,6 @@ namespace HydroAcousticApp_1.ViewModels
                 NotifyOfPropertyChange();
             }
         }
-
 
         public WaterParamsViewModel()
         {

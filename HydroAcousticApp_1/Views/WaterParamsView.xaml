@@ -48,9 +48,41 @@
             <TextBox x:Name="Depth" Text="{Binding Depth}" Margin="2" 
                  Background="#FFE0E6F7" BorderThickness="0"/>
         </Border>
-        <TextBlock Grid.Column="3" Grid.Row="3" Margin="2,4,2,0" FontSize="14">meters</TextBlock>
-        
-        
-        
+        <!--<TextBlock Grid.Column="3" Grid.Row="3" Margin="2,4,2,0" FontSize="14">meters</TextBlock>-->
+
+        <Border BorderThickness="1" CornerRadius="2" Background="#FFAEB5CA" BorderBrush="#FF6A6F7C"
+                Grid.Column="3" Grid.Row="3" Margin="2">
+            <ComboBox  FontSize="14" MinWidth="50" Background="#FFAEB5CA" BorderBrush="#FFAEB5CA">
+                <!--<Style TargetType="{x:Type ComboBox}">
+                    <Setter Property="Foreground" Value="Gray" />
+                    <Setter Property="BorderBrush" Value="Gray" />
+                    <Setter Property="Background" Value="White" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ComboBox">
+                                <Border BorderThickness="1" CornerRadius="2" Background="#FFAEB5CA" BorderBrush="#FF6A6F7C">
+                                    <ContentPresenter>
+                                        <ContentPresenter.Content>
+                                            <ComboBox>
+                                                
+                                            </ComboBox>
+                                        </ContentPresenter.Content>
+                                    </ContentPresenter>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>-->
+                <ComboBoxItem>
+                    <TextBlock x:Name="Meters" Text="m"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock x:Name="KiloMeters" Text="km"/>
+                </ComboBoxItem>
+            </ComboBox>
+        </Border>
+
     </Grid>
+
 </UserControl>
+    

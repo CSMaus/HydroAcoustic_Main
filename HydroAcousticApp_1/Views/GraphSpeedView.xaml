@@ -48,10 +48,10 @@
                                     </Border>
                                     <ControlTemplate.Triggers>
                                         <Trigger Property="IsPressed" Value="True">
-                                            <Setter TargetName="Border" Property="Background" Value="#FFAEB5CA" />
+                                            <Setter TargetName="Border" Property="Background" Value="#FFAEB5CA"/>
                                         </Trigger>
                                         <Trigger Property="IsPressed" Value="False">
-                                            <Setter TargetName="Border" Property="Background" Value="#FFE0E6F7" />
+                                            <Setter TargetName="Border" Property="Background" Value="#FFE0E6F7"/>
                                         </Trigger>
                                     </ControlTemplate.Triggers>
                                 </ControlTemplate>

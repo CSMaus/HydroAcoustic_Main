@@ -93,6 +93,7 @@
     </ApplicationDefinition>
     <Compile Include="Converters\SignalViewModelToLineSeries.cs" />
     <Compile Include="Models\MainModel.cs" />
+    <Compile Include="Services\ChaoticSolvers.cs" />
     <Compile Include="Services\ChenMillero.cs" />
     <Compile Include="Services\GenerateSignals.cs" />
     <Compile Include="ViewModels\GraphSignalsViewModel.cs" />
