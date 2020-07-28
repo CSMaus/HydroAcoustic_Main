@@ -11,7 +11,8 @@ namespace HydroAcousticApp_1.ViewModels
 {
     public class ShellViewModel : Conductor<Screen>, INotifyPropertyChanged
     {
-        private Screen activeSecondaryItem;
+        private Screen activeSecondaryItem; //добавляется для того чтобы можно было выбрать, какая вкладка будет активна из окон графиков
+        //если только один TabControl то создавать эту переменную не надо
 
         public Screen ActiveSecondaryItem
         {
