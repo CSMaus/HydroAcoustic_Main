@@ -6,9 +6,11 @@
         xmlns:cal="http://www.caliburnproject.org"
         xmlns:vm="clr-namespace:HydroAcousticApp_1.ViewModels"
         mc:Ignorable="d" FontSize="18" 
-        Background="#FF4C5057"
         Title="ShellView" Height="600" Width="1000" WindowStartupLocation="CenterScreen"
         d:DataContext="{d:DesignInstance Type=vm:ShellViewModel}">
+    <Window.Background>
+        <SolidColorBrush Opacity="0.55" Color="#FF4C5057"/>
+    </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
